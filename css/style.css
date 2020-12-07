@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+ 
+::after, ::before {
+  box-sizing: border-box;
+}
+ 
+h1, h2, h3, h4, h5, h6, ol, ul, p, address, strong, i {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+   
+ul, li {
+  list-style: none;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+body {
+  color: #111;
+  background: #f9f9f9;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+/* basic css end */
+
+
+/* Main css start */
+.table td, .table th {
+  font-size: 16px;
+}
+/* Main css end */
+
+/* Responsive css */
+@media(max-width: 575px){
+  h4 {
+      font-size: 1rem
+  }
+                  
+  .table td, .table th {
+      padding: .5rem;
+  }
+}
+
+@media print{
+  .container {
+    margin-bottom: 0 !important;
+  }
+  .card {
+    margin-top: -35px !important;
+    background-color: transparent !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: transparent !important;
+  }
+
+  .card .card-header{
+    background-color: transparent !important;
+  }
+
+  .card-header h4{
+    color:  #000 !important;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  /* .table td, .table th {
+    padding: .5rem;
+    font-size: 14px;
+  } */
+
+  .table td, .table th{
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: black !important;
+    font-size: 18px !important;
+    color: black !important;
+    padding:.3rem !important;
+    -webkit-print-color-adjust: black !important;
+    /* -webkit-print-color-adjust:exact ; */
+  }
+
+  .btn{
+    display: none;
+  }
+}
