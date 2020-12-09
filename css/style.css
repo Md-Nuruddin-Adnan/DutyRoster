@@ -46,6 +46,10 @@ body {
   .table td, .table th {
       padding: .5rem;
   }
+
+  .print-btn {
+    display: none;
+  }
 }
 
 @media print{
