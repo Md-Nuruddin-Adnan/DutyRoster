@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;600;700&family=Poppins:wght@400;500&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -24,9 +26,13 @@ a, a:hover {
 
 body {
   color: #111;
-  background: #f9f9f9;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 500;
+  /* background: #f9f9f9; */
+  background-image: linear-gradient(225deg, #C950C2, #4358D0);
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
 }
 /* basic css end */
 
@@ -34,11 +40,63 @@ body {
 /* Main css start */
 .table td, .table th {
   font-size: 16px;
+  color: #110a24;
+}
+
+.table thead th {
+  background: #362F4B;
+  color: #fff;
+  font-weight: 500;
+}
+
+.table th {
+  font-weight: 500;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f6f6f6;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+
+.footer {
+  display: grid;
+  justify-items: end;
+  font-weight: 500;
+  padding: 0px 0 20px 0;
+}
+
+.print-btn {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  border-radius: 0;
 }
 /* Main css end */
 
 /* Responsive css */
 @media(max-width: 575px){
+  .card-body {
+    padding: 0;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
   h4 {
       font-size: 1rem
   }
@@ -53,6 +111,10 @@ body {
 }
 
 @media print{
+  body {
+    display: block;
+  }
+
   .container {
     margin-bottom: 0 !important;
   }
@@ -68,18 +130,12 @@ body {
     background-color: transparent !important;
   }
 
+  .footer,
+  .card-header h3,
   .card-header h4{
     color:  #000 !important;
   }
 
-  .footer {
-    display: none;
-  }
-
-  /* .table td, .table th {
-    padding: .5rem;
-    font-size: 14px;
-  } */
 
   .table td, .table th{
     border-width: 1px !important;
@@ -94,5 +150,9 @@ body {
 
   .btn{
     display: none;
+  }
+
+  .footer {
+    padding: 50px 0 20px 0;
   }
 }
